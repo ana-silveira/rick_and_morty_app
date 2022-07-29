@@ -4,19 +4,20 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
-            "name": "the_rick_and_morty_api",
+            "name": "rick_and_morty_app",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "the_rick_and_morty_api (profile mode)",
+            "name": "rick_and_morty_app (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "the_rick_and_morty_api (release mode)",
+            "name": "rick_and_morty_app (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

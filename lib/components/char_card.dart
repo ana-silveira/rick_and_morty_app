@@ -17,7 +17,7 @@ class CharacterCard extends StatelessWidget {
     return Card(
       color: AppColors.primaryColorLight,
       clipBehavior: Clip.antiAlias,
-      margin: const EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric (
         horizontal: 20,
         vertical: 7.5,
       ),
@@ -29,9 +29,13 @@ class CharacterCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(character.image),
+            Image.network(
+                character.image, fit: BoxFit.contain),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 12
+              ),
               child: Text(
                 character.name.toUpperCase(),
                 style: const TextStyle(

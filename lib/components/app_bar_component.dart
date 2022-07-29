@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:the_rick_and_morty_api/pages/home_page.dart';
-import 'package:the_rick_and_morty_api/theme/app_colors.dart';
-import 'package:the_rick_and_morty_api/theme/app_images.dart';
+import 'package:rick_and_morty_app/pages/home_page.dart';
+import 'package:rick_and_morty_app/theme/app_colors.dart';
+import 'package:rick_and_morty_app/theme/app_images.dart';
 
 PreferredSizeWidget appBarComponent(
   BuildContext context, {
