@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    //initState inicia os dados! Qdo a page abrir e td começar a funcionar, é o comando dela que vai começar.
     characters = Repository.getAllCharacters();
     super.initState();
   }
@@ -52,7 +51,6 @@ class _HomePageState extends State<HomePage> {
             );
           } else if (snapshot.hasError) {
             dataResults = snapshot.error.toString();
-
             return Center(
               child: Text(
                 'Parece que ocorreu um erro por aqui... -> ${snapshot.error}',

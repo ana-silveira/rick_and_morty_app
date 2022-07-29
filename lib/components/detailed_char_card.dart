@@ -9,23 +9,37 @@ class DetailedCharCard extends StatelessWidget {
   }) : super(key: key);
 
   final DetailedCharacter detailedCharacter;
-  //final String space = ' - ';
 
   @override
   Widget build(BuildContext context) {
     return Card(
       color: AppColors.primaryColorLight,
       clipBehavior: Clip.antiAlias,
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 7.5),
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10), // Image border
+            child: SizedBox.fromSize(
+              size: const Size.fromRadius(168), // Image radius
+              child: Image.network(detailedCharacter.image,
+                    width: MediaQuery.of(context).size.width,
+                    alignment: const Alignment(0.0, -0.5),
+                    fit: BoxFit.cover,
+                    loadingBuilder: (context, child, progress) {
+                      return progress == null
+                        ? child
+                        : const LinearProgressIndicator();
+                }),
+            )
+            ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 12,
+              top: 15,
               left: 16,
               right: 16,
               bottom: 20,
@@ -33,11 +47,6 @@ class DetailedCharCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.network(
-                  detailedCharacter.image,
-                  fit: BoxFit.contain,
-                  alignment: Alignment.center,
-                ),
                 Text(
                   detailedCharacter.name.toUpperCase(),
                   style: const TextStyle(
@@ -46,7 +55,7 @@ class DetailedCharCard extends StatelessWidget {
                     fontSize: 17, //14.5
                   ),
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 10),
                 //height: 15
                 Wrap(
                     direction: Axis.horizontal,
@@ -132,6 +141,7 @@ class DetailedCharCard extends StatelessWidget {
               ],
             ),
           ),
+
         ],
       ),
     );

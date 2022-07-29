@@ -17,8 +17,8 @@ class CharacterCard extends StatelessWidget {
     return Card(
       color: AppColors.primaryColorLight,
       clipBehavior: Clip.antiAlias,
-      margin: const EdgeInsets.symmetric (
-        horizontal: 20,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 10,
         vertical: 7.5,
       ),
       shape: const RoundedRectangleBorder(
@@ -29,20 +29,47 @@ class CharacterCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-                character.image, fit: BoxFit.contain),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12
+              padding: const EdgeInsets.only(
+                bottom: 2,
               ),
-              child: Text(
-                character.name.toUpperCase(),
-                style: const TextStyle(
-                  color: AppColors.white,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 14.5,
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                    character.image,
+                    width: MediaQuery.of(context).size.width,
+                    height: 175,
+                    alignment: const Alignment(0.0, -0.5),
+                    fit: BoxFit.fitWidth,
+                    loadingBuilder: (context, child, progress) {
+                      return progress == null
+                          ? child
+                          : const LinearProgressIndicator();
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                //top: 0,
+                left: 5,
+                //right:
+                bottom: 5,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    character.name.toUpperCase(),
+                    style: const TextStyle(
+                      color: AppColors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16, //14.5
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
