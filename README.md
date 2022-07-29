@@ -1,6 +1,6 @@
 # rick_and_morty_app
 
-A new Flutter project.
+Projeto de aplicativo mobile desenvolvido em Flutter a partir da API https://rickandmortyapi.com/ . 
 
 ## Getting Started
 
