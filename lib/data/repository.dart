@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:the_rick_and_morty_api/models/detailed_character.dart';
-import 'package:the_rick_and_morty_api/models/paginated_characters.dart';
+import 'package:rick_and_morty_app/models/detailed_character.dart';
+import 'package:rick_and_morty_app/models/paginated_characters.dart';
 
 abstract class Repository {
   static final _dio = Dio(

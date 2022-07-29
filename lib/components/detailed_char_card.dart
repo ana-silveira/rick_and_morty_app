@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:the_rick_and_morty_api/models/detailed_character.dart';
-import 'package:the_rick_and_morty_api/theme/app_colors.dart';
+import 'package:rick_and_morty_app/models/detailed_character.dart';
+import 'package:rick_and_morty_app/theme/app_colors.dart';
 
 class DetailedCharCard extends StatelessWidget {
   const DetailedCharCard({

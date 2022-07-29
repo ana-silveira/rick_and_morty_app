@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:the_rick_and_morty_api/pages/details_page.dart';
-import 'package:the_rick_and_morty_api/pages/home_page.dart';
+import 'package:rick_and_morty_app/pages/details_page.dart';
+import 'package:rick_and_morty_app/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());

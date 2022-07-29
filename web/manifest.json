@@ -1,6 +1,6 @@
 {
-    "name": "the_rick_and_morty_api",
-    "short_name": "the_rick_and_morty_api",
+    "name": "rick_and_morty_app",
+    "short_name": "rick_and_morty_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:the_rick_and_morty_api/components/app_bar_component.dart';
-import 'package:the_rick_and_morty_api/components/char_card.dart';
-import 'package:the_rick_and_morty_api/data/repository.dart';
-import 'package:the_rick_and_morty_api/models/paginated_characters.dart';
-import 'package:the_rick_and_morty_api/pages/details_page.dart';
-import 'package:the_rick_and_morty_api/theme/app_colors.dart';
+import 'package:rick_and_morty_app/components/app_bar_component.dart';
+import 'package:rick_and_morty_app/components/char_card.dart';
+import 'package:rick_and_morty_app/data/repository.dart';
+import 'package:rick_and_morty_app/models/paginated_characters.dart';
+import 'package:rick_and_morty_app/pages/details_page.dart';
+import 'package:rick_and_morty_app/theme/app_colors.dart';
 
 class HomePage extends StatefulWidget {
   static const routeId = '/';
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               style: const TextStyle(color: AppColors.white),
             );
           }
-        return Container();
+          return Container();
         },
       ),
     );

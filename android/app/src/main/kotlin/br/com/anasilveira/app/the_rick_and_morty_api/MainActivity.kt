@@ -1,4 +1,4 @@
-package br.com.anasilveira.app.the_rick_and_morty_api
+package br.com.anasilveira.app.rick_and_morty_app
 
 import io.flutter.embedding.android.FlutterActivity
 
