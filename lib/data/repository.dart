@@ -11,9 +11,14 @@ abstract class Repository {
 
   static Future<PaginatedCharacters> getAllCharacters() async {
     final response = await _dio.get('/character');
-
     final data = PaginatedCharacters.fromJson(response.data);
+    return data;
+  }
 
+  static Future<PaginatedCharacters> getCharactersPage(String next) async {
+    final splitted = next.split('=');
+    final response = await _dio.get('/character/?page=${splitted[1]}');
+    final data = PaginatedCharacters.fromJson(response.data);
     return data;
   }
 
@@ -24,4 +29,5 @@ abstract class Repository {
 
     return data;
   }
+
 }

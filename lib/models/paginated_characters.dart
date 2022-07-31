@@ -1,7 +1,6 @@
 class PaginatedCharacters {
   final Info info;
   final List<Character> results;
-  /*name, image, specie, status, lastKnownLocation*/
 
   PaginatedCharacters({
     required this.info,
