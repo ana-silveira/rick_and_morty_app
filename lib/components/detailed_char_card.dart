@@ -14,6 +14,7 @@ class DetailedCharCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: AppColors.primaryColorLight,
+      elevation: 18.0,
       clipBehavior: Clip.antiAlias,
       margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       shape: const RoundedRectangleBorder(
@@ -23,20 +24,19 @@ class DetailedCharCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(10), // Image border
-            child: SizedBox.fromSize(
-              size: const Size.fromRadius(168), // Image radius
-              child: Image.network(detailedCharacter.image,
+              borderRadius: BorderRadius.circular(10), // Image border
+              child: SizedBox.fromSize(
+                size: const Size.fromRadius(168), // Image radius
+                child: Image.network(detailedCharacter.image,
                     width: MediaQuery.of(context).size.width,
                     alignment: const Alignment(0.0, -0.5),
                     fit: BoxFit.cover,
                     loadingBuilder: (context, child, progress) {
-                      return progress == null
-                        ? child
-                        : const LinearProgressIndicator();
+                  return progress == null
+                      ? child
+                      : const LinearProgressIndicator();
                 }),
-            )
-            ),
+              )),
           Padding(
             padding: const EdgeInsets.only(
               top: 15,
@@ -62,6 +62,8 @@ class DetailedCharCard extends StatelessWidget {
                     spacing: 10,
                     children: <Widget>[
                       Chip(
+                        elevation: 18.0,
+                        clipBehavior: Clip.antiAlias,
                         //status
                         backgroundColor: (() {
                           switch (detailedCharacter.status) {
@@ -83,6 +85,8 @@ class DetailedCharCard extends StatelessWidget {
                       ),
                       Chip(
                         //gender
+                        elevation: 18.0,
+                        clipBehavior: Clip.antiAlias,
                         backgroundColor: AppColors.primaryColorLight,
                         labelStyle: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -94,6 +98,8 @@ class DetailedCharCard extends StatelessWidget {
                       ),
                       Chip(
                         //specie
+                        elevation: 18.0,
+                        clipBehavior: Clip.antiAlias,
                         backgroundColor: AppColors.primaryColorLight,
                         labelStyle: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -130,8 +136,9 @@ class DetailedCharCard extends StatelessWidget {
                     fontSize: 13,
                   ),
                 ),
+
                 Text(
-                  detailedCharacter.firstSeen,
+                  'Episode ${detailedCharacter.firstSeen}',
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: AppColors.white,
@@ -141,7 +148,6 @@ class DetailedCharCard extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
     );

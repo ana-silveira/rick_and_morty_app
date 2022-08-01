@@ -38,6 +38,8 @@ class CharacterCard extends StatelessWidget {
                 children: [
                   Image.network(
                     character.image,
+                    color: Colors.grey,
+                    colorBlendMode:BlendMode.saturation,
                     width: MediaQuery.of(context).size.width,
                     height: 175,
                     alignment: const Alignment(0.0, -0.5),

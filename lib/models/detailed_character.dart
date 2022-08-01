@@ -21,6 +21,10 @@ class DetailedCharacter {
       required this.firstSeen});
 
   factory DetailedCharacter.fromJson(Map<String, dynamic> json) {
+    
+    String urlEpisode = json["episode"][0];
+    List<String> splitted = urlEpisode.split('episode/');
+
     return DetailedCharacter(
       id: json['id'],
       name: json['name'],
@@ -30,7 +34,7 @@ class DetailedCharacter {
       status: json['status'],
       lastLocation: CharLocation.fromJson(json['location']),
       originLocation: CharLocation.fromJson(json['origin']),
-      firstSeen: json["episode"][0],
+      firstSeen: splitted[1],
     );
   }
 }

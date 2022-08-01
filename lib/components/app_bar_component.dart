@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rick_and_morty_app/pages/home_page.dart';
@@ -9,7 +10,7 @@ PreferredSizeWidget appBarComponent(
   bool isSecondPage = false,
 }) {
   return AppBar(
-      toolbarHeight: kToolbarHeight * 2.2,
+      toolbarHeight: kToolbarHeight * 2.3,
       backgroundColor: AppColors.appBarColor,
       systemOverlayStyle: SystemUiOverlayStyle.light,
       leading: Align(
@@ -21,6 +22,7 @@ PreferredSizeWidget appBarComponent(
             Navigator.of(context).pop();
           },
           child: Icon(
+            color: AppColors.black,
             isSecondPage ? Icons.arrow_back : Icons.menu,
           ),
         ),
@@ -28,10 +30,10 @@ PreferredSizeWidget appBarComponent(
       actions: [
         Container(
           alignment: Alignment.topCenter,
-          margin: const EdgeInsets.only(right: 16),
+          margin: const EdgeInsets.only(right: 16, top: 5),
           child: const Icon(
             Icons.person,
-            color: AppColors.white,
+            color: AppColors.black,
           ),
         )
       ],
@@ -39,13 +41,16 @@ PreferredSizeWidget appBarComponent(
           child: Column(children: [
         Image.asset(
           AppImages.logo,
-          height: 95,
+          fit: BoxFit.contain,
+          height: 98,
         ),
         const Padding(
-            padding: EdgeInsets.only(top: 10.0),
+            padding: EdgeInsets.only(top: 1.0),
             child: Text("RICK AND MORTY API",
                 style: TextStyle(
-                  color: AppColors.white,
-                )))
+                  fontWeight: FontWeight.w900,
+                  fontSize: 20,
+                  color: AppColors.black,
+                  )))
       ])));
 }

@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   infiniteScrolling() {
     if (_scrollController.position.pixels ==
-        _scrollController.position.maxScrollExtent) {
+        _scrollController.position.maxScrollExtent && !loading.value) {
       updateList();
     }
   }
