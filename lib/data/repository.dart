@@ -30,4 +30,10 @@ abstract class Repository {
     return data;
   }
 
+    static Future<PaginatedCharacters> getCharactersByName(String name) async {
+    final response = await _dio.get('/character/?name=$name');
+    final data = PaginatedCharacters.fromJson(response.data);
+    return data;
+  }
+
 }

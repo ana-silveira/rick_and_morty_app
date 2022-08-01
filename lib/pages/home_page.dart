@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   final loading = ValueNotifier(true);
   late final ScrollController _scrollController;
   late dynamic nextPage;
+  // Icon _searchIcon = new Icon(Icons.search);
 
   List<Character> listCharacters = List.empty();
 
@@ -35,7 +36,8 @@ class _HomePageState extends State<HomePage> {
 
   infiniteScrolling() {
     if (_scrollController.position.pixels ==
-        _scrollController.position.maxScrollExtent && !loading.value) {
+            _scrollController.position.maxScrollExtent &&
+        !loading.value) {
       updateList();
     }
   }

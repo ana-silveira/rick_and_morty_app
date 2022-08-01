@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rick_and_morty_app/pages/home_page.dart';
@@ -30,7 +29,7 @@ PreferredSizeWidget appBarComponent(
       actions: [
         Container(
           alignment: Alignment.topCenter,
-          margin: const EdgeInsets.only(right: 16, top: 5),
+          margin: const EdgeInsets.only(right: 16, top: 1),
           child: const Icon(
             Icons.person,
             color: AppColors.black,
@@ -42,7 +41,7 @@ PreferredSizeWidget appBarComponent(
         Image.asset(
           AppImages.logo,
           fit: BoxFit.contain,
-          height: 98,
+          height: 95,
         ),
         const Padding(
             padding: EdgeInsets.only(top: 1.0),
@@ -51,6 +50,6 @@ PreferredSizeWidget appBarComponent(
                   fontWeight: FontWeight.w900,
                   fontSize: 20,
                   color: AppColors.black,
-                  )))
+                )))
       ])));
 }
