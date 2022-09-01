@@ -1,16 +1,7 @@
-# rick_and_morty_app
+# rick_and_morty_app<br><br>
 
-Projeto de aplicativo mobile desenvolvido em Flutter a partir da API https://rickandmortyapi.com/ . 
+Meu primeiro projeto de aplicativo mobile, desenvolvido em Dart utilizando o framework Flutter.  <br>
+Foi utilizada arquitetura REST e formato JSON.<br> <br>
+🤖 API utilizada: https://rickandmortyapi.com/ . <br>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Projeto apresentado no programa de capacitação KodeStart da empresa Kobe Apps. 
